@@ -1,0 +1,28 @@
+$amarillo: #FFF607;
+
+
+@each $red in facebook, instagram, whatsapp {
+  .footer-#{$red} {
+    background-image: url('#{$red}.png');
+  }
+}
+
+$redes: (
+        whatsapp: #F6FF03,
+        facebook:  #F6FF03,
+        instagram: #F6FF03
+);
+
+@each $red, $color in $redes {
+   .btn--#{$red} {
+       background-color: $amarillo;
+   }
+}
+
+@mixin sizes($ancho, $alto) {
+   height: $alto;
+   width: $ancho;
+}
+.box {
+   @include sizes(500px,300px);
+}
